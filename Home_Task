@@ -1,0 +1,46 @@
+2. CREATE TABLE `product` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `PRODUCT` varchar(45) NOT NULL,
+  `Price` int NOT NULL,
+  `rating` decimal(5,2) NOT NULL,
+  `category` varchar(45) NOT NULL,
+  `brand` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+INSERT INTO `shop`.`product`
+(
+`PRODUCT`,
+`Price`,
+`rating`,
+`category`,
+`brand`)
+VALUES
+(
+"iPhone X",
+899,
+4.44,
+"smartphones",
+"Apple"
+);
+
+3.1.
+SELECT PRODUCT, Price FROM shop.product WHERE brand="Apple";
+
+3.2.
+SELECT * FROM shop.product WHERE price<"1000";
+
+3.3.
+SELECT * FROM shop.product WHERE price BETWEEN "500" AND "1500";
+
+3.4.
+SELECT PRODUCT, Price, rating FROM shop.product WHERE brand IN("Apple", "Samsung", "Huawei");
+
+3.5.
+SELECT PRODUCT, category FROM shop.product WHERE PRODUCT LIKE "%Samsung%";
+
+
+
+
+
